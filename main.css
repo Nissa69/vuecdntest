@@ -1,0 +1,155 @@
+body {
+  background-color: blue;
+}
+
+.header {
+margin-top: 10%;
+}
+
+/* Header snipper */
+
+#autocollapse.collapsed .navbar-header {
+  float: none;
+}
+#autocollapse.collapsed .navbar-toggle {
+  display: block;
+}
+#autocollapse.collapsed .navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+#autocollapse.collapsed .navbar-collapse.collapse {
+  display: none!important;
+}
+#autocollapse.collapsed .navbar-nav {
+  float: none!important;
+  margin: 7.5px -15px;
+}
+#autocollapse.collapsed .navbar-nav>li {
+  float: none;
+}
+#autocollapse.collapsed .navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* End of heaeder */
+
+.divmain {
+  text-align: center;
+  background-color: darkblue;
+}
+
+.input {
+  text-align: center;
+}
+h1, span, p {
+  color: black;
+}
+
+.mainBox {
+  border-radius: 5%;
+  background-color: lightblue;
+  padding-bottom: 10px;
+  margin-top: 10%;
+  width: 30%;
+}
+
+.centerLab{
+text-align: center;
+}
+.pages {
+  border-radius: 30px;
+}
+
+.msg {
+  color: white;
+}
+/* monster */
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.monster {
+    width: 100%;
+    height: 15vh;
+    border-radius: 20px;
+    background-color: lightcyan;
+    position: relative;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.body {
+    width: 32vmin;
+    height: 32vmin;
+    background-color: teal;
+    border-radius: 43% 40% 43% 40%;
+    position: absolute;
+    bottom: calc(-1 * 32vmin / 2 - 4vmin);
+    left: -2vmin;
+    animation:
+        wander 5s linear infinite alternate,
+        wave 3s linear infinite,
+        bounce 1s infinite alternate;
+}
+
+.eyes {
+    width: 24vmin;
+    height: 5vmin;
+    position: absolute;
+    bottom: 2vmin;
+    left: calc(32vmin - 24vmin - 2vmin);
+    animation: wander 5s linear infinite alternate;
+}
+
+.eyes::before,
+.eyes::after {
+    content: '';
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    border: 1.25vmin solid white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: blink 5s infinite linear;
+}
+
+.eyes::before {
+    left: 4vmin;
+}
+
+.eyes::after {
+    right: 4vmin;
+}
+
+@keyframes bounce {
+    to {
+        bottom: calc(-1 * 32vmin / 2 - 2vmin);
+    }
+}
+
+@keyframes wave {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wander {
+    to {
+        left: calc(100% - 32vmin + 2vmin);
+    }
+}
+
+@keyframes blink {
+    0%, 4%, 10%, 34%, 40%, 100% {
+        transform: scaleY(1);
+    }
+
+    7%, 37% {
+        transform: scaleY(0);
+    }
+}
